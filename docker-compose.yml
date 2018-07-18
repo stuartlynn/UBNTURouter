@@ -1,0 +1,21 @@
+version: '3.0'
+
+services:
+  valhalla:
+    build:
+      context: ./
+      dockerfile: Dockerfile.valhalla
+    ports:
+      - 8002:8002
+    volumes:
+      - ./config:/conf
+      - ./tiles:/data
+  procesisng:
+    build:
+      context: ./
+      dockerfile: Dockerfile.processing
+    depends_on:
+      - valhalla
+    volumes:
+      - ./:/data
+    command: python process_od_matrix.py

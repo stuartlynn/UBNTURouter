@@ -1,0 +1,4 @@
+FROM valhalla/docker:ppa-1.4.7
+
+ADD fetch_and_generate_tiles.py ./
+CMD /scripts/start_valhalla.sh
