@@ -120,9 +120,9 @@
   },
   "service_limits": {
     "auto": {
-      "max_distance": 5000000.0,
+      "max_distance": 50000000.0,
       "max_locations": 200,
-      "max_matrix_distance": 400000.0,
+      "max_matrix_distance": 40000000.0,
       "max_matrix_locations": 50
     },
     "auto_shorter": {
@@ -150,9 +150,9 @@
       "max_matrix_locations": 50
     },
     "isochrone": {
-      "max_contours": 4,
-      "max_distance": 25000.0,
-      "max_locations": 1,
+      "max_contours": 20,
+      "max_distance": 2500000.0,
+      "max_locations": 100,
       "max_time": 120
     },
     "max_avoid_locations": 50,

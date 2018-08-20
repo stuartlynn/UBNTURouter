@@ -1,5 +1,4 @@
-FROM python:3.7.0-stretch
-
-RUN pip install requests pandas tqdm
+FROM jupyter/datascience-notebook
+RUN python3 -m pip install -U py3-ortools tqdm
 ADD process_od_matrix.py .
-CMD python process_od_matrix.py
+

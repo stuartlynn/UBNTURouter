@@ -10,12 +10,14 @@ services:
     volumes:
       - ./config:/conf
       - ./tiles:/data
-  procesisng:
+  processing:
     build:
       context: ./
       dockerfile: Dockerfile.processing
+    ports:
+      - 4444:8888
     depends_on:
       - valhalla
     volumes:
-      - ./:/data
+      - ./:/home/jovyan
     command: python process_od_matrix.py
